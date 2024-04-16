@@ -70,7 +70,6 @@ model Hotel {
     ammenities         String
     image              String
     distance           String
-    cancellationCharge String
     ratingLabel        String
     initialPrice       Int
     rating             Float

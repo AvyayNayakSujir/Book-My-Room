@@ -71,6 +71,8 @@ model Hotel {
     image              String
     distance           String
     cancellationCharge String
+    ratingLabel        String
+    initialPrice       Int
     rating             Float
     rooms              Room[]
     hotelImages        hotelImages[]

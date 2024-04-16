@@ -62,14 +62,18 @@ model VerificationToken {
 }
 
 model Hotel {
-    id          String @id @default(cuid())
-    name        String
-    city        String
-    country     String
-    description String
-    star_rating Int
-    ammenities  String
-    rooms       Room[]
+    id                 String        @id @default(cuid())
+    name               String
+    city               String
+    country            String
+    description        String
+    ammenities         String
+    image              String
+    distance           String
+    cancellationCharge String
+    rating             Float
+    rooms              Room[]
+    hotelImages        hotelImages[]
 
     @@index([name])
     @@index([city])
@@ -84,9 +88,17 @@ model Room {
     price       Int
     description String
     type        String
+    status      String
     bookings    Booking[]
 
     @@index([name])
+}
+
+model hotelImages {
+    id      String @id @default(cuid())
+    hotel   Hotel  @relation(fields: [hotelId], references: [id])
+    hotelId String
+    Path    String
 }
 
 model Booking {

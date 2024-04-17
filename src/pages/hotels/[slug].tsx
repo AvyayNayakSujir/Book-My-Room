@@ -1,5 +1,5 @@
 import { api } from "~/utils/api";
-import { useParams } from "react-router-dom";
+
 import Navbar from "../../components/Navbar";
 import { useRouter } from 'next/router';
 import Header from "../../components/Header";

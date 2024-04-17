@@ -1,19 +1,27 @@
 import { api } from "~/utils/api";
 import React from "react";
+import Link from "next/link";
 
 export default function SearchItem() {
-  const hotels = api.hotel.getAll.useQuery();
+  const hot = api.hotel.getAll.useQuery() ;
+
+  const hotels =  api.hotel.getByCity.useQuery("wvb") || api.hotel.getByCountry.useQuery("USA");
   
   return (
     <div>
       {hotels.data?.map((hotel) => {
-        return (
+        return ( <Link
+          href={`/hotels/${hotel.id}`} 
+         
+        >
           <div className="searchItem border border-gray-300 p-[10px] rounded-[5px] flex justify-between gap-[20px] mb-[20px]">
+            
             <img src={hotel.image} alt="" className="SearchItemImg w-[200px] h-[200px] object-cover" />
+            
         <div className="siDesc flex-2 flex flex-col gap-[10px]">
-          <h1 className="siTitle text-[20px] text-[#0071c2]">{hotel.name}</h1>
+          <h1 className="siTitle font-bold text-[20px] text-[#0071c2]">{hotel.name}</h1>
           <span className="siDistance text-[20px]">{hotel.distance}</span>
-          <span className="siTaxi w-[max-content] rounded-[5px] bg-[#008009] p-[5px] text-[20px] text-white">
+          <span className="siTaxi w-[max-content] rounded-[5px] bg-[#008009] p-[5px] text-[12px] text-white">
             Free Airport Taxi
           </span>
           <span className="siSubtitle text-[20px] font-bold">
@@ -35,14 +43,17 @@ export default function SearchItem() {
             </button>
           </div>
           <div className="siDetailTexts flex flex-col gap-[5px] text-right">
-            <span className="siPrice text-[24px] mr-[10px]">{hotel.initialPrice}</span>
+            <span className="siPrice text-[24px] mr-[10px]">₹{hotel.initialPrice}/-</span>
             <span className="siGst text-[12px] text-gray-400">Inclusive of GST</span>
-            <button className="siButton text-whitefont-bold text-[14px] cursor-pointer rounded-[5px] border-none text-white bg-[#0071c2] px-[20px] py-[5px]">
-              Check Out
-            </button>
+           <button  className="siButton text-whitefont-bold text-[14px] cursor-pointer rounded-[5px] border-none text-white bg-[#0071c2] px-[20px] py-[5px]">
+                  Check Out
+                  </button>
+                
           </div>
         </div>
+        
       </div>
+      </Link>
         );
       })}
       

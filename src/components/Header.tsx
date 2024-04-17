@@ -5,10 +5,9 @@ import { useState } from 'react';
 
 
 export default function Header(props: { type: string; }) {
+        const [destination,setDestination] = useState("")
+    
 
-
-    const [destination,setDestination] = useState("")
- 
 
 
     return (

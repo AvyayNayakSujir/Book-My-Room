@@ -20,10 +20,10 @@ export default function SearchItem() {
             {hotel.description}
           </span>
           <span className="siFeatures text-[12px]">{hotel.ammenities}</span>
-          <span className="siCancel bg-[#008009] text-[16px] font-bold">
+          <span className="siCancel text-[#008009] text-[16px] font-bold">
           Free Cancellation
           </span>
-          <span className="siCancelSubtitle bg-[#008009] text-[12px]">
+          <span className="siCancelSubtitle text-[#008009] text-[12px]">
           You can cancel later! So lock in this great deal today
           </span>
         </div>
@@ -35,9 +35,9 @@ export default function SearchItem() {
             </button>
           </div>
           <div className="siDetailTexts flex flex-col gap-[5px] text-right">
-            <span className="siPrice text-[24px]">{hotel.initialPrice}</span>
+            <span className="siPrice text-[24px] mr-[10px]">{hotel.initialPrice}</span>
             <span className="siGst text-[12px] text-gray-400">Inclusive of GST</span>
-            <button className="siButton text-whitefont-bold cursor-pointer rounded-[5px] border-none bg-[#0071c2] px-5 py-10">
+            <button className="siButton text-whitefont-bold text-[14px] cursor-pointer rounded-[5px] border-none text-white bg-[#0071c2] px-[20px] py-[5px]">
               Check Out
             </button>
           </div>

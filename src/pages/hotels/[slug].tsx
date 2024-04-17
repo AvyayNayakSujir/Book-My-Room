@@ -46,14 +46,8 @@ const Hotel = () => {
             Book a stay over ₹2000 at this property and get a free airport taxi
           </span>
           <div className="hotelImages flex flex-wrap justify-between">
-            <div className="hotelImgWrapper w-[33%] pb-1">
-              <img
-                src={hotelsImages.data?.Path}
-                alt=""
-                className="hotelImg w-full object-cover cursor-pointer rounded-lg"
-              />
-              </div>
-            {/* { hotelsImages.data?.map((photo) => (
+            
+            { hotelsImages.data?.map((photo) => (
               <div className="hotelImgWrapper w-[33%] pb-1" key={photo.id}>
                 
                 <img
@@ -62,7 +56,7 @@ const Hotel = () => {
                   className="hotelImg w-full object-cover cursor-pointer rounded-lg"
                 />
               </div>
-            ))} */}
+            ))}
           </div>
           <div className="hotelDetails flex justify-between gap-[20px] mt-[20px]">
             <div className="hotelDetailsTexts flex-[3]">

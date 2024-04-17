@@ -22,7 +22,7 @@ export const hotelRouter = createTRPCRouter({
     return ctx.db.hotel.findMany({ where: { country: input } });
   }),
   getImagePath: publicProcedure.input(z.string()).query(({ ctx, input }) => {
-    return ctx.db.hotelImages.findFirst({ where: { id: input } });
+    return ctx.db.hotelImages.findMany({ where: { hotelId: input } });
   }),
   
       

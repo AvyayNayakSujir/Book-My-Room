@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function SearchItem() {
   const hot = api.hotel.getAll.useQuery() ;
 
-  const hotels =  api.hotel.getByCity.useQuery("wvb") || api.hotel.getByCountry.useQuery("USA");
+  const hotels =   api.hotel.getByCountry.useQuery("India");
   
   return (
     <div>

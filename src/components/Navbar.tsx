@@ -1,5 +1,5 @@
 import AuthShowcase from "./Auth"
-
+import { signIn } from "next-auth/react"
 const Navbar = () => {
 
   
@@ -10,6 +10,7 @@ const Navbar = () => {
             <div className="navItems">
 
                 <button className='navButton ml-[20px] my-[10px] mx-[5px] border-none p-[5px] cursor-pointer font-bold bg-white text-[#003580] rounded-sm' onClick={AuthShowcase}>Login </button>
+                      <signIn/>
                 </div>
         </div>
     </div>

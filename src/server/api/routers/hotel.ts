@@ -29,7 +29,6 @@ export const hotelRouter = createTRPCRouter({
     const hotelByCity = ctx.db.hotel.findMany({ where: { city: input } });
     const hotelByCountry = ctx.db.hotel.findMany({ where: { country: input } });
     const hotelByName = ctx.db.hotel.findMany({ where: { name: input } });
-
     return { hotelByCity, hotelByCountry, hotelByName };
   }),
 });

@@ -1,22 +1,15 @@
-import AuthShowcase from "./Auth"
-import { signIn,signOut,useSession } from "next-auth/react"
+import { AuthShowcase } from "./Auth";
 const Navbar = () => {
-
-  
   return (
-    <div className='navbar h-[50px] flex bg-[#003580] justify-center'>
-        <div className="nav-container w-full max-w-[1024px] text-white flex justify-between items-center">
-            <span className='logo font-[500]'>IamBooking</span>
-            <div className="navItems">
-
-                <button className='navButton ml-[20px] my-[10px] mx-[5px] border-none p-[5px] cursor-pointer font-bold bg-white text-[#003580] rounded-sm' onClick={AuthShowcase}>Login </button>
-                     
-                </div>
+    <div className="navbar flex h-[50px] justify-center bg-[#003580]">
+      <div className="nav-container flex w-full max-w-[1024px] items-center justify-between text-white">
+        <span className="logo font-[500]">BookMyRoom</span>
+        <div className="navItems">
+          <AuthShowcase />
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-
-
-export default Navbar
+export default Navbar;

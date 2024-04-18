@@ -8,7 +8,7 @@ const MailList = () => {
         </h1>
         <span className="mailDesc">Sign Up and we'll send the best deals to you</span>
         <div className="mailInputContainer">
-            <input className="w-[300px] h-[30px] p-[20px] border-none mr-[10px]" type="text" placeholder='Your Email'/>
+            <input className="w-[300px] h-[30px] p-[20px] text-black border-none mr-[10px]" type="text" placeholder='Your Email'/>
             <button className="h-[50px] bg-[#0071c2] text-white border-none p-3 rounded-[5px] cursor-pointer">Subscribe</button>
         </div>
     </div>

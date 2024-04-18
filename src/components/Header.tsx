@@ -1,8 +1,10 @@
 import Link from "next/link";
+
 import { useState } from "react";
 
 export default function Header(props: { type: string }) {
   const [destination, setDestination] = useState("");
+  
 
   return (
     <div>
@@ -45,7 +47,7 @@ export default function Header(props: { type: string }) {
                 </div>
 
                 <div className="headerSearchItem flex items-center gap-[10px]">
-                  <Link href={`/hotels`}>
+                  <Link href={`/${destination}`}>
                     <button className="headerButton cursor-pointer rounded-lg border-none bg-blue-600 p-[10px] font-medium text-white">
                       {" "}
                       Search

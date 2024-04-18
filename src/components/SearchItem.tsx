@@ -1,11 +1,19 @@
 import { api } from "~/utils/api";
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function SearchItem() {
+ 
+  const router = useRouter();
+  const {slug} = router.query;
   const hot = api.hotel.getAll.useQuery() ;
+ 
 
-  const hotels =   api.hotel.getByCountry.useQuery("India");
+  
+    const hotels =api.hotel.getByCountry.useQuery(`${slug}`);
+  
+
   
   return (
     <div>

@@ -38,7 +38,7 @@ const Footer = () => {
             </ul>
         </div>
         
-        <div className="fText mb-[50px]">Copywright © 2024 IamBooking</div>
+        <div className="fText mb-[50px]">Copywright © 2024 HotelEase</div>
     </div>
   )
 }
